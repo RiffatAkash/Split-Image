@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    background-image: url(bg.jpg);
+    overflow: hidden;
+    z-index: 2;
+}
+.box .image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.box .image span{
+    width: 25%;
+    height: 100%;
+    background-image: url(1.png);
+    transition: 0.5s;
+}
+.box:hover .image span
+{
+    transform: translateY(-100%);
+}
+.box .image span:nth-child(1){
+    background-position: 0;
+    animation: image_moving 8s linear 0s infinite alternate;
+    /* transition-delay: 0s; */
+}
+.box .image span:nth-child(2){
+    background-position: 33.33%;
+    animation: image_moving 8s linear .1s infinite alternate;
+    /* transition-delay: 0.1s; */
+}
+.box .image span:nth-child(3){
+    background-position: 66.66%;
+    /* transition-delay: 0.2s; */
+    animation: image_moving 8s linear .2s infinite alternate;
+}
+.box .image span:nth-child(4){
+    background-position: 100%;
+    /* transition-delay: 0.8s; */
+    animation: image_moving 8s linear .3s infinite alternate;
+
+}
+.slide_3{
+    left: 0;
+    top: 0;
+}
+.slide_3 .offer {left: 83px;top: 50px;z-index: -1;}
+.absolute{position: absolute;}
+
+@keyframes image_moving {
+    /* from{transform: translateY(0%);}
+    to{transform: translateY(100%) } */
+    20%,80%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%) 
+    }
+}
+
+.pulse {animation-name: pulse;animation-duration: 1s;animation-iteration-count: infinite;}
+
+@keyframes pulse {
+    0% {transform: scaleX(1)}
+    50% {transform: scale3d(.9, .9, .9)}
+    to {transform: scaleX(1)}
+}
