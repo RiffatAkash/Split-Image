@@ -6,7 +6,7 @@ body{
     position: relative;
     width: 300px;
     height: 250px;
-    background-image: url(bg.jpg);
+    background-image: url(https://ms.purplepatch.online/test/university/southest/banner/asset/5.jpg);
     overflow: hidden;
     z-index: 2;
 }
@@ -21,7 +21,7 @@ body{
 .box .image span{
     width: 25%;
     height: 100%;
-    background-image: url(1.png);
+    background-image: url(https://ms.purplepatch.online/test/university/southest/banner/asset/1.jpg);
     transition: 0.5s;
 }
 .box:hover .image span
